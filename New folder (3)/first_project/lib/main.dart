@@ -41,8 +41,27 @@ import 'package:flutter/material.dart';
 
 // Task Birthday
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: Scaffold(backgroundColor:const Color.fromARGB(255, 139, 93, 108),
+//       body:Center(
+//         child: Image(image: AssetImage('assets/images/birthday.png'),)
+//       ),
+//     ),
+//     );
+//   }
+// }
+
+import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
 }
@@ -52,11 +71,32 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(backgroundColor:const Color.fromARGB(255, 139, 93, 108),
-      body:Center(
-        child: Image(image: AssetImage('assets/images/birthday.png'),)
-      ),
-    ),
-    );
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(' Horizontal List of Student Name'),
+        ),
+        body : Column(
+          mainAxisAlignment:MainAxisAlignment.start, 
+          crossAxisAlignment:CrossAxisAlignment.center,
+          children: [
+            Card(
+              child:ListTile(
+                leading: Image.asset("assets/images/orange.png"),
+        title: Text("Raneem", style:TextStyle(fontFamily:" Lateef"),),
+              ),
+            ),
+                Card(
+              child:ListTile(
+                leading: Image.asset("assets/images/orange.png"),
+        title: Text("saba'a", style:TextStyle(fontFamily:" Lateef"),),
+              ),
+            )
+
+          ],
+        )
+
+      )
+      );
+   
   }
 }
