@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:first_project/login.dart';
+import 'package:first_project/login.dart';
 // import 'package:first_project/Business Card.dart';
-import 'package:first_project/Basketball Score .dart';
+// import 'package:first_project/Basketball Score .dart';
 
 // void main() {
 //   runApp(MyApp());
@@ -102,13 +102,6 @@ import 'package:first_project/Basketball Score .dart';
 //   }
 // }
 
-                                                    // {{{Tasklogin & signup}}}
-
-// void main() {
-//   runApp(MaterialApp(
-//     home:Login(),
-//   ),);
-// }
 
                                                        // {{Task Business Card}}
 // void main(){
@@ -123,10 +116,26 @@ import 'package:first_project/Basketball Score .dart';
 
 
 
-void main() {
+// void main() {
+//   runApp(MaterialApp(
+//    home:BasketBallpoint() ,
+//   debugShowCheckedModeBanner:false,
+//   ));
+// }
+
+
+                                                    // {{{Tasklogin & signup}}}
+
+  void main() {
   runApp(MaterialApp(
-   home:BasketBallpoint() ,
-  debugShowCheckedModeBanner:false,
+    debugShowCheckedModeBanner: false,
+    home: Login(),
+    builder: (context, child) {
+      return Directionality(
+        textDirection: TextDirection.rtl,
+        child: child!,
+      );
+    },
   ));
 }
 
